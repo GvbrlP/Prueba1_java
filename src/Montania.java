@@ -1,5 +1,10 @@
-public class Montania {
+public class Montania extends Bicicleta {
 
 
-    private int cantidadSuspension
+    private int cantidadSuspension;
+
+    public Montania(String codigoBicicleta, int anioFabricacion, int pesoBicicleta, int cantidadSuspension) {
+        super(codigoBicicleta, anioFabricacion, pesoBicicleta);
+        this.cantidadSuspension = cantidadSuspension;
+    }
 }
