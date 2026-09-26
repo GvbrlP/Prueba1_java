@@ -2,7 +2,7 @@ public class Bicicleta {
 
     private String codigoBicicleta;
     private int anioFabricacion;
-    private int pesoBicicleta;
+    private double pesoBicicleta;
 
     public Bicicleta(String codigoBicicleta, int anioFabricacion, int pesoBicicleta) {
         this.codigoBicicleta = codigoBicicleta;
@@ -26,7 +26,7 @@ public class Bicicleta {
         this.anioFabricacion = anioFabricacion;
     }
 
-    public int getPesoBicicleta() {
+    public double getPesoBicicleta() {
         return pesoBicicleta;
     }
 

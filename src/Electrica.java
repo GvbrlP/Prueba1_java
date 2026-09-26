@@ -1,14 +1,16 @@
-public class Electrica extends Bicicleta{
+public class Electrica extends Bicicleta implements IConGarantiaExtendida{
 
 
-    private String autonomiaKilometro;
-    private String bateriaCertificada;
-    private String garantiaExtendida;
+    private int autonomiaKilometro;
+    private int bateriaCertificada;
+    private int garantiaExtendida;
 
-    public Electrica(String codigoBicicleta, int anioFabricacion, int pesoBicicleta, String autonomiaKilometro, String bateriaCertificada, String garantiaExtendida) {
+    public Electrica(String codigoBicicleta, int anioFabricacion, int pesoBicicleta, int autonomiaKilometro, int bateriaCertificada, int garantiaExtendida) {
         super(codigoBicicleta, anioFabricacion, pesoBicicleta);
         this.autonomiaKilometro = autonomiaKilometro;
         this.bateriaCertificada = bateriaCertificada;
         this.garantiaExtendida = garantiaExtendida;
     }
 }
+
+
