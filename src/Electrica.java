@@ -7,10 +7,45 @@ public class Electrica extends Bicicleta implements IConGarantiaExtendida{
 
     public Electrica(String codigoBicicleta, int anioFabricacion, double pesoBicicleta, int autonomiaKilometro, boolean bateriaCertificada, boolean garantiaExtendida) {
         super(codigoBicicleta, anioFabricacion, pesoBicicleta);
+        setAutonomiaKilometro(autonomiaKilometro);
+        setBateriaCertificada(bateriaCertificada);
+        setGarantiaExtendida(garantiaExtendida);
+    }
+
+    public int getAutonomiaKilometro() {
+        return autonomiaKilometro;
+    }
+
+    public void setAutonomiaKilometro(int autonomiaKilometro) {
         this.autonomiaKilometro = autonomiaKilometro;
+    }
+
+    public boolean isBateriaCertificada() {
+        return bateriaCertificada;
+    }
+
+    public void setBateriaCertificada(boolean bateriaCertificada) {
         this.bateriaCertificada = bateriaCertificada;
+    }
+
+    public boolean isGarantiaExtendida() {
+        return garantiaExtendida;
+    }
+
+    public void setGarantiaExtendida(boolean garantiaExtendida) {
         this.garantiaExtendida = garantiaExtendida;
     }
+
+    @Override
+    public double calcularCostoMantencion() {
+        double costoBase = 45000;
+        if (!bateriaCertificada) {
+            return costoBase * 1.25;
+        }
+        return costoBase;
+    }
 }
+
+
 
 

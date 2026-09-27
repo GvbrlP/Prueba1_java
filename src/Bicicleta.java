@@ -1,4 +1,4 @@
-public class Bicicleta {
+public abstract class Bicicleta {
 
     private String codigoBicicleta;
     private int anioFabricacion;
@@ -44,4 +44,10 @@ public class Bicicleta {
         this.pesoBicicleta = pesoBicicleta;
     }
 
+    @Override
+    public String toString() {
+        return "Codigo: " + codigoBicicleta + " | Año: " + anioFabricacion;
+    }
+
+    public abstract double calcularCostoMantencion();
 }
