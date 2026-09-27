@@ -4,10 +4,10 @@ public class Bicicleta {
     private int anioFabricacion;
     private double pesoBicicleta;
 
-    public Bicicleta(String codigoBicicleta, int anioFabricacion, int pesoBicicleta) {
-        this.codigoBicicleta = codigoBicicleta;
-        this.anioFabricacion = anioFabricacion;
-        this.pesoBicicleta = pesoBicicleta;
+    public Bicicleta(String codigoBicicleta, int anioFabricacion, double pesoBicicleta) {
+        setCodigoBicicleta(codigoBicicleta);
+        setAnioFabricacion(anioFabricacion);
+        setPesoBicicleta(pesoBicicleta);
     }
 
     public String getCodigoBicicleta() {
@@ -15,6 +15,9 @@ public class Bicicleta {
     }
 
     public void setCodigoBicicleta(String codigoBicicleta) {
+        if (codigoBicicleta == null || codigoBicicleta.trim().isEmpty()){
+            throw new IllegalArgumentException("el codigo no puede ser nulo");
+        }
         this.codigoBicicleta = codigoBicicleta;
     }
 
@@ -23,6 +26,9 @@ public class Bicicleta {
     }
 
     public void setAnioFabricacion(int anioFabricacion) {
+        if (anioFabricacion < 2000 ||  anioFabricacion >2026){
+            throw new IllegalArgumentException("el año de fabricacion debe estar entre 2000 y 2026");
+        }
         this.anioFabricacion = anioFabricacion;
     }
 
@@ -30,7 +36,11 @@ public class Bicicleta {
         return pesoBicicleta;
     }
 
-    public void setPesoBicicleta(int pesoBicicleta) {
+    public void setPesoBicicleta(double pesoBicicleta) {
+       if (pesoBicicleta <= 0){
+           throw new IllegalArgumentException("el peso debe ser mayor a cero");
+
+       }
         this.pesoBicicleta = pesoBicicleta;
     }
 
