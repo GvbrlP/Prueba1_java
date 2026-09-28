@@ -44,6 +44,15 @@ public class Electrica extends Bicicleta implements IConGarantiaExtendida{
         }
         return costoBase;
     }
+
+    @Override
+    public boolean consultarGarantiaActiva() {
+        return this.garantiaExtendida;
+    }
+    @Override
+    public void activarGarantia() {
+        this.garantiaExtendida = true;
+    }
 }
 
 
