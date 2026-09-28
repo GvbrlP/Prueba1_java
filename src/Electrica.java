@@ -48,11 +48,22 @@ public class Electrica extends Bicicleta implements IConGarantiaExtendida{
     @Override
     public boolean consultarGarantiaActiva() {
         return this.garantiaExtendida;
+
+
     }
     @Override
     public void activarGarantia() {
         this.garantiaExtendida = true;
     }
+
+    @Override
+    public String toString() {
+        String textoBateria = bateriaCertificada ? "si" : "no";
+        String textoGarantia = garantiaExtendida ? "si" : "no";
+
+        return super.toString()+ " | Autonomía: " + autonomiaKilometro + " km | Batería certificada: " + textoBateria + " | Garantía extendida: " + textoGarantia;
+    }
+
 }
 
 

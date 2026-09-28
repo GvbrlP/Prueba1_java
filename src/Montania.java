@@ -25,5 +25,9 @@ public class Montania extends Bicicleta {
         }
         return costoBase;
     }
+    @Override
+    public String toString() {
+        return super.toString() + " | Suspensiones: " + cantidadSuspension;
+    }
 }
 

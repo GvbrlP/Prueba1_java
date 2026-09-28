@@ -42,12 +42,11 @@ public abstract class Bicicleta {
 
        }
         this.pesoBicicleta = pesoBicicleta;
-    }
 
+    }
     @Override
     public String toString() {
-        return "Codigo: " + codigoBicicleta + " | Año: " + anioFabricacion;
+        return "Código: " + codigoBicicleta + " | Año: " + anioFabricacion;
     }
-
     public abstract double calcularCostoMantencion();
 }
